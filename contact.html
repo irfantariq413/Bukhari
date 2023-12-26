@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .container-fluid {
+        max-width: 50%;
+        margin: auto;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1
+        style="
+          color: white;
+          font-size: 55px;
+          font-family: 'Josefin Sans', sans-serif;
+          text-align: center;
+          margin: auto;
+        "
+      >
+        Zeina Bukhari
+      </h1>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="mx-auto">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                style="
+                  color: white;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 300;
+                "
+                class="nav-link"
+                href="index.html"
+                >projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                style="
+                  color: white;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 300;
+                "
+                class="nav-link"
+                href="about-us.html"
+                >about me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                style="
+                  color: #5990dc;
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: 300;
+                "
+                class="nav-link"
+                href="contact.html"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="contact-container">
+        <!-- Left Column - Contact Info -->
+        <div class="row" style="width: 80%; margin: auto; padding: 0px">
+          <div class="col-md-6 p-0">
+            <div class="contact-info">
+              <h2>Contact Info</h2>
+              <br />
+              <p>zeina4@example.com</p>
+              <p>123 Main Street, Cityville, America</p>
+              <a
+                class="download-button mx-auto text-decoration-none"
+                href="#"
+                id="downloadBtn"
+                >Download Resume</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 p-0">
+            <!-- Right Column - Contact Form -->
+            <div class="contact-form">
+              <form action="#" method="post">
+                <label for="name" style="float: left">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email" style="float: left">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message" style="float: left">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+
+                <button
+                  class="download-button mx-auto text-decoration-none"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          // Specify the path to your PDF file
+          var pdfPath = "assets/files/document.pdf";
+
+          // Create a link element
+          var link = document.createElement("a");
+
+          // Set the href attribute to the path of the PDF file
+          link.href = pdfPath;
+
+          // Set the download attribute with the desired filename
+          link.download = "document.pdf";
+
+          // Append the link to the document
+          document.body.appendChild(link);
+
+          // Trigger a click event on the link to start the download
+          link.click();
+
+          // Remove the link from the document
+          document.body.removeChild(link);
+        });
+    </script>
+  </body>
+</html>
